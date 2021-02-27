@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>
+            The results are here
+        </h1>
+        <h3>The data you entered is: {{lis}}</h3>
+        <h3>The category of the class is {{ans}}</h3>
+        
+        <!-- get an image from the user where {{name}} 
+        is the rendered prediction sent by views.py file -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="sentFile" />
+            <input type="submit" name="submit" value="Upload" />
+        </form>
+        {{name}}
+
+        <!-- ------ -->
+        <pre></pre>
+        <a href="{% url 'home' %}">Go to home</a>
+    </body>
+</html>
+

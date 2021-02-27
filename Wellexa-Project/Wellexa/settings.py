@@ -118,3 +118,39 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+import keras
+import numpy as np
+from keras import backend as K
+import tensorflow as tf
+from tensorflow.python.keras.backend import set_session
+from keras.applications import vgg16
+from keras.models import load_model
+
+def get_session():
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
+    return tf.Session(config=config)
+
+K.tensorflow_backend.set_session(get_session())
+
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+SESS = tf.Session(config=config)
+print("model loading")
+GRAPH1 = tf.get_default_graph()
+
+set_session(SESS)
+# Load the VGG model
+VGG_MODEL = vgg16.VGG16(weights="imagenet")
+#Load the personally trained model
+MY_MODEL = load_model('best_model.h5')
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'media/'
