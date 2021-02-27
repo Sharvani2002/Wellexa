@@ -1,7 +1,7 @@
 # Wellexa
 
 ### Description:
-An easy-to-use food monitor
+An easy-to-use health/food monitor
 
 ### Tech stack used:
 
