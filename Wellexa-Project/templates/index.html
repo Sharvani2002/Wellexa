@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        
+        
+body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background:linear-gradient(10deg,#ff2851,#EF5350 );
+    height:3000px;
+    font-family:"merriweather",serif;
+}
+
+input[type=checkbox] {
+    width:40px;
+    height:40px;
+    position:fixed;
+    top:10px;
+    right:10px;
+    opacity:0;
+    z-index:11;
+    
+}
+
+.icon {
+    
+    width:80px;
+    height:40px;
+    position:fixed;
+    top:15px;
+    right:15px;
+    background:rgba(126,87,226,.4);
+    border-radius:3px;
+    border:1px solid rgba(244,244,244,.3);
+    box-shadow:10px 15px 30px rgba(0,0,0,.2);
+    z-index:10;
+    transform:rotate(360deg);
+    transition:ease-in-out .5s;
+}
+
+.icon:before {
+    content:"menu";
+    text-transform:capitalize;
+    font-size:1em;
+    display:flex;
+    justify-content:center;
+    line-height:40px;
+    letter-spacing:.1em;
+    color:rgba(255,255,255,.8);
+    transition:ease-in-out .5s;
+}
+
+
+ul {
+    position:fixed;
+    margin:0;
+    padding:0;;
+    padding-top:40%;
+    position:fixed ;
+    top:0;
+    left:-280px;
+    /*display:flex  ;
+    justify-content:center;
+    align-items:center;*/
+     width:220px;
+     height:140vh;
+     background:rgba(126,87,226,.4);
+     text-align:left;
+     border-radius:0 50px 0 0;
+     box-shadow:20px 0 30px rgba(0,0,0,.2);
+     transition: all ease-in-out .5s;
+     z-index:10;
+}
+
+ul li {
+    position:relative;
+    bottom:-70%;
+    display:block;
+    list-style:none;
+    margin-bottom:50px;
+    transition:ease-in-out 1s .5s;
+}
+
+ul li a {
+    display:block;
+    text-decoration:none;
+    text-transform:capitalize;
+    font-size:1.1em;
+    letter-spacing:.1em;
+    color:rgba(255,255,255,.8);
+    padding:10px;
+    padding-left:30%;
+}
+
+a:hover {
+    color:#F0F4C3;
+    transition:ease-in-out .5s;
+    text-shadow:2px 3px 10px rgba(0,0,0,.8);
+}
+
+.main[type=checkbox]:checked ~ .icon ,
+.main[type=checkbox]:checked {
+    transform:rotate(-360deg);
+    right:40%;
+}
+
+.main[type=checkbox]:checked ~ .icon:before {
+    content:"close";
+    transition:ease-in-out .3s;
+}
+
+.main[type=checkbox]:checked ~ ul {
+    left:0;
+    z-index:10;
+}
+
+.main[type=checkbox]:checked ~ ul li {
+    margin-bottom:0;
+    bottom:0;
+}
+
+.main[type=checkbox]:checked ~ label {
+    left:230px;
+}
+
+
+
+
+.sec[type=checkbox] {
+    -webkit-appearance:none;
+    display:none;
+    visibility:hidden;
+    position:absolute;
+}
+
+
+.sec[type=checkbox]:checked ~ section {
+    box-shadow:0px 15px 30px rgba(0,0,0,.3)
+               ,inset 0 0 0 300px rgba(126,87,226,.4);
+}
+label {
+    position:relative;
+    top:0;
+    left:0;
+    display:flex;
+    transition:ease-in-out .5s;
+    margin-bottom:330px;
+}
+section {
+    position:absolute;
+    left:15px;
+    top:55px;
+    width:85%;
+    height:auto;
+    margin: 20px auto ;
+    box-shadow:0px 15px 30px rgba(0,0,0,.3);
+    border:1px solid rgba(244,244,244,.3);
+    padding:20px 10px;
+    background:rgba(126,87,226,.1);
+    border-radius:5px;
+    transition:ease-in-out .3s;
+}
+
+section h3 {
+    margin:0px 0;
+    font-size:1.5em;
+    letter-spacing:.1em;
+    color:rgba(254,254,254,.7);
+    margin-bottom:20px;
+}
+
+section h4 {
+    margin-bottom:0px;
+    font-size:.6em;
+    font-weight:300;
+    color:rgba(254,254,254,.3);
+}
+
+section p {
+    font-size:.8em;
+    font-weight:100;
+    line-height:1.8em;
+    color:rgba(254,254,254,.56);
+}
+
+
+        
+    </style>
+    
+    
+    
+    
+    <body>
+    
+    
+    
+        <input class="main"type="checkbox"/>
+        <span class="icon"></span>
+        <ul>
+           <li><a href="#home">AI Yoga trainer</a></li>
+           <li><a href="#about">Food calorie scanner</a></li>
+           <li><a href="#services">Set remainder </a></li>
+           <li><a href="#portfolio">Voice assitant</a></li>
+        </ul>
+        
+        
+              
+            
+    </body>
+</html>
