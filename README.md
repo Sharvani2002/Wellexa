@@ -82,7 +82,7 @@ None
 ### Post hackathon improvements(not for submission):
 - Improved colab link: https://colab.research.google.com/drive/1v3IQlu1f-pleIZkoOTLAhxNmj_dwndmg?usp=sharing
     - Sample image URLs to try:
-      (currently image URLs work and they need to be of jpeg/png/jp format)
+      (currently image URLs work and they need to be of jpeg/png/jpeg format)
       https://image.shutterstock.com/image-photo/masala-dosa-indian-savory-crepes-600w-783911236.jpg <br>
       https://as1.ftcdn.net/jpg/02/21/25/16/1000_F_221251677_H4e9ADfkdV8kyLRLbHrU9oxzy4DDaxth.jpg
       
