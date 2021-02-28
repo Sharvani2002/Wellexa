@@ -9,7 +9,10 @@ A health/food monitoring application. Many times things like nutritional informa
 Python, Deep Neural Networks, HTML, CSS, Django,Flask,Javascript
 
 ### Links to test:
+The colab file:
 https://colab.research.google.com/drive/1IEv2L1moJLGrZIKeHwlWxkPBiU9kOG4c#scrollTo=GfCsbyialA8N
+google drive folder:
+https://drive.google.com/drive/folders/1Fwp-zK_7-XH320W-6YHwvVqKjLGpbG6D?usp=sharing
 
 ### Libraries and dependencies required for the project (If any) 
 Posenet, Tensorflow, pyttsx3, schedule, random, time, getpass
@@ -55,3 +58,4 @@ Posenet, Tensorflow, pyttsx3, schedule, random, time, getpass
        PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and one version that can detect multiple persons in an image/video. 
 
 ### Declaration of Previous Work(if any): 
+None
