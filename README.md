@@ -9,9 +9,9 @@ A health/food monitoring application. Many times things like nutritional informa
 Python, Deep Neural Networks, HTML, CSS, Django,Flask,Javascript
 
 ### Links to test:
-The colab file:
+- The colab file:
 https://colab.research.google.com/drive/1IEv2L1moJLGrZIKeHwlWxkPBiU9kOG4c#scrollTo=GfCsbyialA8N
-google drive folder:
+- google drive folder:
 https://drive.google.com/drive/folders/1Fwp-zK_7-XH320W-6YHwvVqKjLGpbG6D?usp=sharing
 
 ### Libraries and dependencies required for the project (If any) 
@@ -61,7 +61,9 @@ Installations needed:
        PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and one version that can detect multiple persons in an image/video. 
 
 <br>
+
 - Run the codes in the .ipynb file on colab 
+
 - Click the first link("public_url") in the scond last cell which looks something like this:
 
 ```
