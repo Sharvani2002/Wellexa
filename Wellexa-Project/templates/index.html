@@ -4,6 +4,22 @@
         <title>Page Title</title>
         <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     </head>
+	 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="nav-links">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-link" style="--i: .6s">
+                                <a href="{% url 'index' %}">Index</a>
+                            </li>
+							<li class="nav-link" style="--i: .6s">
+                                <a href="{% url 'home' %}">Homepage</a>
+                            </li>
+							<li class="nav-link" style="--i: .6s">
+                                <a href="{% url 'text2speech' %}">Text2Speech</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
     <style>
         
         
@@ -199,13 +215,13 @@ section p {
     
     
     
-        <input class="main"type="checkbox"/>
+        <input class="main" type="checkbox"/>
         <span class="icon"></span>
         <ul>
            <li><a href="#home">AI Yoga trainer</a></li>
-           <li><a href="#about">Food calorie scanner</a></li>
-           <li><a href="#services">Set remainder </a></li>
-           <li><a href="#portfolio">Voice assitant</a></li>
+           <li><a href="{% url 'monitor' %}">Food calorie scanner</a></li>
+           <li><a href="{% url 'text2speech' %}">Set remainder </a></li>
+           <li><a href="{% url 'text2speech' %}">Voice assitant</a></li>
         </ul>
         
         

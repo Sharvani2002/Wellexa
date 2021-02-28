@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 'honeybadger.contrib.DjangoHoneybadgerMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,7 +55,8 @@ ROOT_URLCONF = 'Wellexa.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        # 'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -99,6 +101,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+HONEYBADGER = {
+  'API_KEY': '8858316b'
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -116,64 +121,62 @@ USE_TZ = True
 
 
 
-# import os
-import os
 # os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
-import keras
-import numpy as np
-# from keras import backend as K
-# import tensorflow.keras.backend as K
-import tensorflow.compat.v1 as tf
-import tensorflow.compat.v1.keras.backend as K
-# import tensorflow as tf
-from tensorflow.python.keras.backend import set_session
-# from keras.applications import vgg16
-from keras.models import load_model
-from tensorflow.python.keras.backend import get_session
+# import keras
+# import numpy as np
+# # from keras import backend as K
+# # import tensorflow.keras.backend as K
+# import tensorflow.compat.v1 as tf
+# import tensorflow.compat.v1.keras.backend as K
+# # import tensorflow as tf
+# from tensorflow.python.keras.backend import set_session
+# # from keras.applications import vgg16
+# from keras.models import load_model
+# from tensorflow.python.keras.backend import get_session
 
 
 
+# # def get_session():
+# #     config = tf.ConfigProto()
+# #     config.gpu_options.allow_growth = True
+# #     return tf.compat.v1.Session(config=config)
+
+# # # tf.keras.backend.clear_session()
+# # # with tf.Session():
+
+# # # K.tensorflow_backend.set_session(get_session())
+# # K.set_session(get_session())
+# # # tf.compat.v1.keras.backend.set_session(get_session())
+# # config = tf.compat.v1.ConfigProto()
+# # config.gpu_options.allow_growth = True
+# # SESS = tf.compat.v1.Session(config=config)
+# # print("model loading")
+# # GRAPH1 = tf.get_default_graph()
+
+# # K.set_session(SESS)
+# # # Load the VGG model
+# # VGG_MODEL = vgg16.VGG16(weights="imagenet")
+# # Load the personally trained model
+
+# # MY_MODEL = load_model('best_model.h5')
+# tf.keras.backend.clear_session()
 # def get_session():
 #     config = tf.ConfigProto()
 #     config.gpu_options.allow_growth = True
-#     return tf.compat.v1.Session(config=config)
+#     return tf.Session(config=config)
 
-# # tf.keras.backend.clear_session()
-# # with tf.Session():
-
-# # K.tensorflow_backend.set_session(get_session())
 # K.set_session(get_session())
-# # tf.compat.v1.keras.backend.set_session(get_session())
-# config = tf.compat.v1.ConfigProto()
+
+# config = tf.ConfigProto()
 # config.gpu_options.allow_growth = True
-# SESS = tf.compat.v1.Session(config=config)
+# SESS = tf.Session(config=config)
 # print("model loading")
 # GRAPH1 = tf.get_default_graph()
 
-# K.set_session(SESS)
+# set_session(SESS)
 # # Load the VGG model
-# VGG_MODEL = vgg16.VGG16(weights="imagenet")
-# Load the personally trained model
-
+# # VGG_MODEL = vgg16.VGG16(weights="imagenet")
 # MY_MODEL = load_model('best_model.h5')
-tf.keras.backend.clear_session()
-def get_session():
-    config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True
-    return tf.Session(config=config)
-
-K.set_session(get_session())
-
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-SESS = tf.Session(config=config)
-print("model loading")
-GRAPH1 = tf.get_default_graph()
-
-set_session(SESS)
-# Load the VGG model
-# VGG_MODEL = vgg16.VGG16(weights="imagenet")
-MY_MODEL = load_model('best_model.h5')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

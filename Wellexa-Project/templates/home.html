@@ -7,8 +7,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Text.css" />
+	 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="nav-links">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-link" style="--i: .6s">
+                                <a href="{% url 'index' %}" style="color:  #45a049;">Index</a>
+                            </li>
+							<li class="nav-link" style="--i: .6s">
+                                <a href="{% url 'home' %}" style="color:  #45a049;">Homepage</a>
+                            </li>
+							<li class="nav-link" style="--i: .6s">
+                                <a href="{% url 'text2speech' %}" style="color:  #45a049;">Text2Speech</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
     
-    <title>Wellexa</title>
+    <title>Wellexq</title>
 </head>
 
 <style>
@@ -72,23 +88,21 @@ a{
 </style>
 
 <body>
-  <!-- <div class="content"> -->
-      <div>
+  <div class="content">
     <h1>Wellexa</h1>
     <h1>wellexa</h1>
     
   </div>
-  <div align="left">
+  
+</body>
 
-    {% csrf_token %}
+</html>
+
+    <!-- {% csrf_token %}
 
     <form action="{% url 'result' %}">
 
         Name:  <input type="text" required name="Name"><br><br>
         
         <input type="submit" name="" value="submit">
-      </form>
-  </div>
-</body>
-
-</html>
+      </form> -->
