@@ -61,13 +61,15 @@ Installations needed:
        PoseNet can be used to estimate either a single pose or multiple poses, meaning there is a version of the algorithm that can detect only one person in an image/video and one version that can detect multiple persons in an image/video. 
 
 <br>
-Run the codes in the .ipynb file on colab 
-Click the first link("public_url") in the scond last cell which looks something like this:
+- Run the codes in the .ipynb file on colab 
+- Click the first link("public_url") in the scond last cell which looks something like this:
+
 ```
-<NgrokTunnel: "http://a79b8420f21b.ngrok.io" -> "http://localhost:80">
+      <NgrokTunnel: "http://a79b8420f21b.ngrok.io" -> "http://localhost:80">
 ```
-<br>
-We haven't actually deployed the django part("Wellexa-Project" folder in this repo), so you would have to run it on local host to check it 
+
+<br><br>
+- We haven't actually deployed the django part("Wellexa-Project" folder in this repo), so you would have to run it on local host to check it 
 <br>
 
 ### Declaration of Previous Work(if any): 
