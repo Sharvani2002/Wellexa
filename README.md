@@ -83,4 +83,9 @@ None
       (currently image URLs work and they need to be of jpeg/png/jpeg format)
       https://image.shutterstock.com/image-photo/masala-dosa-indian-savory-crepes-600w-783911236.jpg <br>
       https://as1.ftcdn.net/jpg/02/21/25/16/1000_F_221251677_H4e9ADfkdV8kyLRLbHrU9oxzy4DDaxth.jpg
-      
+ - Fixed Tensorflow errors, To test the app,
+   - Clone the repo
+   - Copy and paste "best_model.h5" from the google drive folder link mentioned above to the "Wellexa-Project" folder
+   - Run the server locally by entering the command `python manage.py runserver` in the Wellexa-Project directory
+   - Enter the local address to open the home/food monitor page
+   - Upload the file 
