@@ -146,7 +146,7 @@ def get_session():
 
 K.set_session(get_session())
 config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
+# config.gpu_options.allow_growth = True
 SESS = tf.compat.v1.Session(config=config)
 print("model loading")
 GRAPH1 = tf.get_default_graph()

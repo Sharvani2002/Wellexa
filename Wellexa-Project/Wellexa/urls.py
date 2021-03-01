@@ -19,9 +19,9 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home, name = "home"),
+    path('', views.home, name = "home"),
     path('index/', views.index, name ="index"),
-    path('', views.tmonitor, name='form_page'),
+    path('tmonitor/', views.tmonitor, name='tmonitor'),
     path('result/', views.result, name = "result"),
     path('speech/', views.speech, name="text2speech"),
     path('monitor/', views.monitor, name="monitor"),

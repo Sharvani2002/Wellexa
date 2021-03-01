@@ -9,10 +9,11 @@ from django.conf import settings
 from django.shortcuts import redirect
 
 from . import notif_rem
+import time
+import schedule
 
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
-
 from tensorflow.python.keras.backend import set_session
 # import tensorflow as tf
 import tensorflow.compat.v1 as tf
@@ -21,10 +22,15 @@ import datetime
 import traceback
 from . import models
 
+# import sys
+# from PIL import Image
+# sys.modules['Image'] = Image 
+
 
 def home(request):
     # return HttpResponse("<h1>This is Home</h1>")
     return render(request, "home.html")
+
 def index(request):
     # return HttpResponse("<h1>This is Home</h1>")
     return render(request, "index.html")
@@ -37,8 +43,6 @@ def result(request):
     ans = 5
     return render(request, "result.html",{'ans': ans, 'lis': lis})
 
-import time
-import schedule
 
 def speech(request):
     if request.method == 'POST':
@@ -67,13 +71,10 @@ def speech(request):
 
 
 def monitor(request):
+    #put the ngrok URL here(it changes, so replace)
     response = redirect("http://23dbe3e00a99.ngrok.io/")
     # response = redirect("http://stackoverflow.com/")
     return response
-
-# import sys
-# from PIL import Image
-# sys.modules['Image'] = Image 
 
 
 def tmonitor(request):
@@ -86,7 +87,7 @@ def tmonitor(request):
         # response['name'] = str(label)
         response['name'] = str(category)
         tf.keras.backend.clear_session()
-        return render(request,'form_page.html',response)
+        return render(request,'tmonitor.html',response)
 
     else:
-        return render(request,'form_page.html')
+        return render(request,'tmonitor.html')

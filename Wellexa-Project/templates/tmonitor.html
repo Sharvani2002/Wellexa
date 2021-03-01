@@ -2,14 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Food_Monitor</title>
     </head>
     <body>
+        <div align="Center">
         <h1>
-            The results are here
+            Food Monitor
         </h1>
-        <h3>The data you entered is: {{lis}}</h3>
-        <h3>The category of the class is {{ans}}</h3>
+        <!-- <h3>The data you entered is: {{lis}}</h3>
+        <h3>The category of the class is {{ans}}</h3> -->
         
         <!-- get an image from the user where {{name}} 
         is the rendered prediction sent by views.py file -->
@@ -18,11 +19,19 @@
             <input type="file" name="sentFile" />
             <input type="submit" name="submit" value="Upload" />
         </form>
-        {{name}}
+        <h3>Predictions:</h3>
+        <div>The food is: {{name}}</div>
+        
 
         <!-- ------ -->
         <pre></pre>
-        <a href="{% url 'home' %}">Go to home</a>
+        <div>        
+            <a href="{% url 'home' %}">home</a><br>
+            <a href="{% url 'index' %}">index</a>
+        </div>
+
+    </div>
+
     </body>
 </html>
 

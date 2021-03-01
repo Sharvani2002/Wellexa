@@ -56,7 +56,7 @@ input[type=checkbox] {
     box-shadow:10px 15px 30px rgba(0,0,0,.2);
     z-index:10;
     transform:rotate(360deg);
-    transition:ease-in-out .5s;
+    /* transition:ease-in-out .5s; */
 }
 
 .icon:before {
@@ -68,7 +68,7 @@ input[type=checkbox] {
     line-height:40px;
     letter-spacing:.1em;
     color:rgba(255,255,255,.8);
-    transition:ease-in-out .5s;
+    /* transition:ease-in-out .5s; */
 }
 
 
@@ -89,7 +89,7 @@ ul {
      text-align:left;
      border-radius:0 50px 0 0;
      box-shadow:20px 0 30px rgba(0,0,0,.2);
-     transition: all ease-in-out .5s;
+     /* transition: all ease-in-out .5s; */
      z-index:10;
 }
 
@@ -99,7 +99,7 @@ ul li {
     display:block;
     list-style:none;
     margin-bottom:50px;
-    transition:ease-in-out 1s .5s;
+    /* transition:ease-in-out 1s .5s; */
 }
 
 ul li a {
@@ -115,7 +115,7 @@ ul li a {
 
 a:hover {
     color:#F0F4C3;
-    transition:ease-in-out .5s;
+    /* transition:ease-in-out .5s; */
     text-shadow:2px 3px 10px rgba(0,0,0,.8);
 }
 
@@ -127,7 +127,7 @@ a:hover {
 
 .main[type=checkbox]:checked ~ .icon:before {
     content:"close";
-    transition:ease-in-out .3s;
+    /* transition:ease-in-out .3s; */
 }
 
 .main[type=checkbox]:checked ~ ul {
@@ -164,7 +164,7 @@ label {
     top:0;
     left:0;
     display:flex;
-    transition:ease-in-out .5s;
+    /* transition:ease-in-out .5s; */
     margin-bottom:330px;
 }
 section {
@@ -179,7 +179,7 @@ section {
     padding:20px 10px;
     background:rgba(126,87,226,.1);
     border-radius:5px;
-    transition:ease-in-out .3s;
+    /* transition:ease-in-out .3s; */
 }
 
 section h3 {
@@ -218,10 +218,11 @@ section p {
         <input class="main" type="checkbox"/>
         <span class="icon"></span>
         <ul>
-           <li><a href="#home">AI Yoga trainer</a></li>
-           <li><a href="{% url 'monitor' %}">Food calorie scanner</a></li>
-           <li><a href="{% url 'text2speech' %}">Set remainder </a></li>
+           <li><a href="{% url 'tmonitor' %}">Food calorie scanner</a></li>
            <li><a href="{% url 'text2speech' %}">Voice assitant</a></li>
+           <li><a href="#home">AI Yoga trainer</a></li>
+           <li><a href="{% url 'text2speech' %}">Set remainder </a></li>
+
         </ul>
         
         
