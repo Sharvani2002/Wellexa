@@ -25,6 +25,7 @@ urlpatterns = [
     path('result/', views.result, name = "result"),
     path('speech/', views.speech, name="text2speech"),
     path('monitor/', views.monitor, name="monitor"),
+    path('aipose/', views.aipose, name="aipose"),
     
 
 ]

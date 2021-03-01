@@ -98,7 +98,7 @@ ul li {
     bottom:-70%;
     display:block;
     list-style:none;
-    margin-bottom:50px;
+    margin-bottom:10px;
     /* transition:ease-in-out 1s .5s; */
 }
 
@@ -136,8 +136,8 @@ a:hover {
 }
 
 .main[type=checkbox]:checked ~ ul li {
-    margin-bottom:0;
-    bottom:0;
+    margin-bottom: 10px;
+    bottom:300px;
 }
 
 .main[type=checkbox]:checked ~ label {
@@ -220,7 +220,7 @@ section p {
         <ul>
            <li><a href="{% url 'tmonitor' %}">Food calorie scanner</a></li>
            <li><a href="{% url 'text2speech' %}">Voice assitant</a></li>
-           <li><a href="#home">AI Yoga trainer</a></li>
+           <li><a href="{% url 'aipose' %}">AI Yoga trainer</a></li>
            <li><a href="{% url 'text2speech' %}">Set remainder </a></li>
 
         </ul>

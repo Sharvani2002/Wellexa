@@ -91,3 +91,6 @@ def tmonitor(request):
 
     else:
         return render(request,'tmonitor.html')
+
+def aipose(request):
+    return render(request, 'Aipose.html')
