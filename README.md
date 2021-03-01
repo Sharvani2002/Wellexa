@@ -44,8 +44,6 @@ Installations needed:
 ```
       <NgrokTunnel: "http://a79b8420f21b.ngrok.io" -> "http://localhost:80">
 ```
-
-<br><br>
 - We haven't actually deployed the django part("Wellexa-Project" folder in this repo), so you would have to run it on local host to check it 
 <br>
 
